@@ -1,10 +1,10 @@
 import requests
 
-class Base:
+
+class Kkiapay:
     BASE_URL = 'https://api.kkiapay.me'
     SANDBOX_URL = 'https://api-sandbox.kkiapay.me'
 
-class Kkiapay(Base):
     def __init__(self, public_key, private_key, secret, sandbox=False):
         self.public_key = public_key
         self.private_key = private_key

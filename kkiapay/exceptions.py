@@ -1,0 +1,2 @@
+class KkiapayException(Exception):
+    pass

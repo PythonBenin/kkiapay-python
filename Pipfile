@@ -10,6 +10,7 @@ pytest = "*"
 black = "*"
 requests = "*"
 mock = "*"
+requests-mock = "*"
 
 [requires]
 python_version = "3.7"
