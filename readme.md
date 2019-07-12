@@ -24,6 +24,10 @@ k = Kkiapay('public_key', 'private_key', 'secret', sandbox=True)
 
 transaction = k.verify_transaction('LVFNrK1nx')
 
+print(transaction)
+# => KkiapayTransaction(performed_at='2019-07-11T11:24:42.687Z', type='DEBIT', status='FAILED', source='MOBILE_MONEY', amount=1, fees=0, country='BJ', reason='invalid_number', transactionId='LVFNrK1nx', performedAt='07/11/2019'
+)
+
 print(transaction.status)
 # => FAILED
 ```
