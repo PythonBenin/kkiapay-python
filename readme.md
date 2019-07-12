@@ -6,7 +6,7 @@ pip install kkiapay
 ```
 
 ```python
-from kkiapay import Kkiakay
+from kkiapay import Kkiapay
 
 k = Kkiapay(public_key, private_key, secret)
 
