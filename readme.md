@@ -60,6 +60,7 @@ Here's the plan for what's coming:
 - [x] Verify Transaction
 - [ ] Refund Transaction
 - [ ] Schedule Payout
+- [ ] Add better errors and exceptions
 - [ ] Add tests.
 
 ## Contributing
