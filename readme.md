@@ -50,7 +50,7 @@ print(transaction.amount)
 # => 1
 ```
 
-## Roadmap
+## Road map
 
 `kkiapay-python` is still under heavy development, we decided to ship it in this early stage so you can help us make it better.
 
