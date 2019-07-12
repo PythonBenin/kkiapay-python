@@ -2,11 +2,6 @@ import json
 import requests
 from collections import namedtuple
 
-try:
-    from types import SimpleNamespace as Namespace
-except ImportError:
-    from argparse import Namespace
-
 
 class Kkiapay:
 
