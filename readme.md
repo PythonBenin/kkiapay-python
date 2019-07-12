@@ -13,7 +13,7 @@ Community-driven admin KkiaPay Sdk for Python.
 
 ## Installation
 
-To get the latest version of Laravel `kkiapay-python`, simply run:
+To get the latest version of KkiaPay Sdk for Python , simply run:
 
 ```bash
 pip install kkiapay
