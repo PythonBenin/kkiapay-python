@@ -64,8 +64,8 @@ Here's the plan for what's coming:
 
 ## Contributing
 
-Check our contribution guide.
+Check our [contribution guide](CONTRIBUTING.md).
 
 ## License
 
-`kkiapay-python` is open-sourced software licensed under the MIT license.
+`kkiapay-python` is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
