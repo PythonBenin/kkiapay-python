@@ -40,6 +40,8 @@ print(transaction)
 
 print(transaction.status)
 # => FAILED
+print(transaction.amount)
+# => 1
 ```
 
 ## Roadmap
