@@ -56,7 +56,10 @@ print(transaction.amount)
 
 Here's the plan for what's coming:
 
-- [x] Python 2
+- [x] Sandbox and Live environments
+- [x] Verify Transaction
+- [ ] Refund Transaction
+- [ ] Schedule Payout
 - [ ] Add tests.
 
 ## Contributing
