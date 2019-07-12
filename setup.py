@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kkiapay",
-    version="0.0.2",
+    version="0.0.5",
     author="Junior Gantin",
     author_email="nioperas06@gmail.com",
     description="Community-driven Admin KkiaPay Sdk for Python",
