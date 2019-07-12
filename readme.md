@@ -1,13 +1,19 @@
 # kkiapay-python
-> ⚠️ [Work In Progress] Community-driven admin KkiaPay Sdk for Python
 
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Road map](#road-map)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
 
+Community-driven admin KkiaPay Sdk for Python.
 
 ## Installation
 
-`kkiapay-python`
+To get the latest version of Laravel `kkiapay-python`, simply run:
 
 ```bash
 pip install kkiapay
@@ -49,3 +55,14 @@ print(transaction.amount)
 `kkiapay-python` is still under heavy development, we decided to ship it in this early stage so you can help us make it better.
 
 Here's the plan for what's coming:
+
+- [x] Python 2
+- [ ] Add tests.
+
+## Contributing
+
+Check our contribution guide.
+
+## License
+
+`kkiapay-python` is open-sourced software licensed under the MIT license.
