@@ -1,6 +1,7 @@
 import json
 import requests
 from collections import namedtuple
+
 try:
     from types import SimpleNamespace as Namespace
 except ImportError:
@@ -25,13 +26,17 @@ class Kkiapay:
         }
         self.url = self.SANDBOX_URL if self.sandbox else self.BASE_URL
 
-
     def verify_transaction(self, transaction_id):
         self.url += "/api/v1/transactions/status"
         payload = {"transactionId": transaction_id}
         r = requests.post(self.url, data=payload, headers=self.headers)
 
-        return json.loads(r.text, object_hook=lambda d: namedtuple('KkiapayTransaction', d.keys())(*d.values()))
+        return json.loads(
+            r.text,
+            object_hook=lambda d: namedtuple("KkiapayTransaction", d.keys())(
+                *d.values()
+            ),
+        )
 
     def refund_transaction(self, transaction_id):
         self.url += "/api/v1/transactions/revert"
