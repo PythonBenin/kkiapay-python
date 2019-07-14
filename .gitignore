@@ -1,2 +1,6 @@
 .pytest_cache
 .vscode
+test.py
+kkiapay.egg-info
+dist
+build

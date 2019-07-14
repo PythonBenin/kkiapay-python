@@ -11,6 +11,9 @@ black = "*"
 requests = "*"
 mock = "*"
 requests-mock = "*"
+setuptools = "*"
+wheel = "*"
+twine = "*"
 
 [requires]
 python_version = "3.7"
