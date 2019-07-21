@@ -37,8 +37,14 @@ class Kkiapay:
 
     def refund_transaction(self, transaction_id):
         payload = {"transactionId": transaction_id}
-        r = requests.post(self.revert_url, data=payload, headers=self.headers)
-        return r.text
+        r = requests.post(self.url, data=payload, headers=self.headers)
+
+        return json.loads(
+            r.text,
+            object_hook=lambda d: namedtuple("KkiapayTransaction", d.keys())(
+                *d.values()
+            ),
+        )
 
     def setup_payout(self, options):
         r = requests.post(self.payout_url, data=options, headers=self.headers)
