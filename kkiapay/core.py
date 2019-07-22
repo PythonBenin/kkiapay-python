@@ -37,7 +37,13 @@ class Kkiapay:
         self.url += "/api/v1/transactions/revert"
         payload = {"transactionId": transaction_id}
         r = requests.post(self.url, data=payload, headers=self.headers)
-        return r.text
+
+        return json.loads(
+            r.text,
+            object_hook=lambda d: namedtuple("KkiapayTransaction", d.keys())(
+                *d.values()
+            ),
+        )
 
     def setup_payout(self, options):
         self.url += "/merchant/payouts/schedule"

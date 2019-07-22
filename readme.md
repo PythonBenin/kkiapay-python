@@ -58,7 +58,7 @@ Here's the plan for what's coming:
 
 - [x] Sandbox and Live environments
 - [x] Verify Transaction
-- [ ] Refund Transaction
+- [x] Refund Transaction - `Only available on Live`
 - [ ] Schedule Payout
 - [ ] Add better errors and exceptions handling
 - [ ] Add tests.
