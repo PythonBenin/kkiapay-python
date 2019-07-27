@@ -24,7 +24,11 @@ class Kkiapay:
     def verify_transaction(self, transaction_id):
         self.url += "/api/v1/transactions/status"
         payload = {"transactionId": transaction_id}
-        r = requests.post(self.url, data=payload, headers=self.headers)
+        
+        try:
+            r = requests.post(self.url, data=payload, headers=self.headers)
+        except requests.exceptions.ConnectionError:
+            return print('Sorry! There is a problem with your connection.')
 
         return json.loads(
             r.text,
@@ -36,7 +40,11 @@ class Kkiapay:
     def refund_transaction(self, transaction_id):
         self.url += "/api/v1/transactions/revert"
         payload = {"transactionId": transaction_id}
-        r = requests.post(self.url, data=payload, headers=self.headers)
+        
+        try:
+            r = requests.post(self.url, data=payload, headers=self.headers)
+        except requests.exceptions.ConnectionError:
+            return print('Sorry! There is a problem with your connection.')
 
         return json.loads(
             r.text,
