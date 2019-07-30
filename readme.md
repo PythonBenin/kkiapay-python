@@ -59,9 +59,56 @@ Here's the plan for what's coming:
 - [x] Sandbox and Live environments
 - [x] Verify Transaction
 - [x] Refund Transaction - `Only available on Live`
-- [ ] Schedule Payout
+- [x] Schedule Payout
 - [ ] Add better errors and exceptions handling
 - [ ] Add tests.
+
+
+## Schedule Payout
+
+### Example
+Below is an example of the function usage:
+```python
+# Setup Scheduled Payout using 'ROOF' algorithm
+schedule_payout = k.setup_payout(algorithm = '2',
+                                 roof_amount = '10000',
+                                 destination = '61000000',
+                                 destination_type = '1',
+                                 send_notification = True,
+                                 country_code = '229'
+                                )
+
+print(schedule_payout)
+#{
+#	'response': 
+#	{
+#		'merchant': '5d34445784deb700073a0281', 
+#		'meta_data': '', 
+#		'algorithm': 'roof', 
+#		'rate_frequency': '', 
+#		'roof_amount': '10000', 
+#		'active': True, 
+#		'send_notification': True, 
+#		'destination_type': 'MOBILE_MONEY', 
+#		'destination': '22961000000', 
+#		'job_name': '', 
+#		'account': '5d34445784deb700073a0282'
+#	}, 
+#	'status_code': 200
+#}
+```
+
+### Attribute Matrix
+|        Name       | Required |               Possible Values              |                                    Description                                    |
+|:-----------------:|:--------:|:------------------------------------------:|:---------------------------------------------------------------------------------:|
+|     **algorithm**     |     **M**    |         {"1": 'rate', "2": 'roof'}         |                         Specify the algorithm to be used.                         |
+|  **destination_type** |     **M**    | {"1": 'MOBILE_MONEY', "2": 'BANK_ACCOUNT'} |                            Specify the Destination type                           |
+|    **destination**    |     **M**    |                 '61000000'                 |                              Specify the Destination number/account Number                                                     |
+|   **rate_frequency**  |    M/O   	|      {"1": '3d', "2": '1w', "3": '1m'}     |       Specify the Rate Frequency. Required in case 'rate' algorithm is used       |
+|    **roof_amount**    |    M/O   |                   '10000'                  |                              Specify the Roof amount.                             |
+| **send_notification** |     O    |            Boolean (True, False)           |                      Specify is a Notification should be sent                     |
+|    **country_code**   |     O    |                    '229'                   | Specify the Country Code of the destination number is case 'MOBILE MONEY' is used |
+
 
 ## Contributing
 

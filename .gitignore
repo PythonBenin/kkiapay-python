@@ -4,3 +4,6 @@ test.py
 kkiapay.egg-info
 dist
 build
+venv
+.idea
+__pycache__
