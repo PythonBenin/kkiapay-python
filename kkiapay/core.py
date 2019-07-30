@@ -57,7 +57,7 @@ class Kkiapay:
         )
 
     def setup_payout(self, algorithm: str, destination: str, destination_type: str, roof_amount: str = None,
-                     send_notification: bool = True, rate_frequency: str = DESTINATION_TYPES["1"],
+                     send_notification: bool = True, rate_frequency: str = RATE_FREQUENCIES["1"],
                      country_code: str = "229"):
         options = {
             "destination": country_code + destination if destination_type == "1" else destination,
