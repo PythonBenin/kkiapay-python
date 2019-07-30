@@ -59,7 +59,7 @@ Here's the plan for what's coming:
 - [x] Sandbox and Live environments
 - [x] Verify Transaction
 - [x] Refund Transaction
-- [ ] Schedule Payout
+- [x] Schedule Payout
 - [ ] Add better errors and exceptions handling
 - [ ] Add tests.
 
