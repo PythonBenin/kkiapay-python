@@ -1,16 +1,19 @@
+from .utils import DESTINATION_TYPES, ALGORITHMS
+
+
 class KkiapayException(Exception):
-    pass
+    message = None
+    details = None
+
+    def __str__(self):
+        return self.message + " or ".join(" if it's ".join(self.details))
 
 
-class KKiapayAlogrithmException(Exception):
-    def __init__(self, algorithms):
-        Exception.__init__(self,
-                           "algorithm must be {}".format(
-                               " or ".join(" if it's ".join(algorithm) for algorithm in algorithms.items())))
+class KKiapayAlgorithmException(KkiapayException):
+    details = ALGORITHMS.values()
+    message = "algorithms must be "
 
 
-class KKiapayDestinationTypeException(Exception):
-    def __init__(self, algorithms):
-        Exception.__init__(self,
-                           "destination_type must be {}".format(
-                               " or ".join(" if it's ".join(algorithm) for algorithm in algorithms.items())))
+class KKiapayDestinationTypeException(KkiapayException):
+    details = DESTINATION_TYPES.values()
+    message = "destination_type must be "
