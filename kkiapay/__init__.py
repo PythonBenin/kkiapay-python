@@ -1,1 +1,1 @@
-from .core import Kkiapay
+from .api import Kkiapay
