@@ -80,20 +80,20 @@ schedule_payout = k.setup_payout(algorithm = '2',
 
 print(schedule_payout)
 #{
-#	'response': 
+#	'response':
 #	{
-#		'merchant': '5d34445784deb700073a0281', 
-#		'meta_data': '', 
-#		'algorithm': 'roof', 
-#		'rate_frequency': '', 
-#		'roof_amount': '10000', 
-#		'active': True, 
-#		'send_notification': True, 
-#		'destination_type': 'MOBILE_MONEY', 
-#		'destination': '22961000000', 
-#		'job_name': '', 
+#		'merchant': '5d34445784deb700073a0281',
+#		'meta_data': '',
+#		'algorithm': 'roof',
+#		'rate_frequency': '',
+#		'roof_amount': '10000',
+#		'active': True,
+#		'send_notification': True,
+#		'destination_type': 'MOBILE_MONEY',
+#		'destination': '22961000000',
+#		'job_name': '',
 #		'account': '5d34445784deb700073a0282'
-#	}, 
+#	},
 #	'status_code': 200
 #}
 ```

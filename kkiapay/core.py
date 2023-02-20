@@ -30,11 +30,12 @@ class Kkiapay:
             "X-PRIVATE-KEY": self.private_key,
         }
         self.url = self.SANDBOX_URL if self.sandbox else self.BASE_URL
+        self.transaction_url = self.url + "/api/v1/transactions/status"
+        self.revert_url = self.url + "/api/v1/transactions/revert"
+        self.payout_url = self.url + "/merchant/payouts/schedule"
 
     def verify_transaction(self, transaction_id):
-        self.url += "/api/v1/transactions/status"
         payload = {"transactionId": transaction_id}
-        
         try:
             r = requests.post(self.url, data=payload, headers=self.headers)
         except requests.exceptions.ConnectionError:
@@ -48,9 +49,8 @@ class Kkiapay:
         )
 
     def refund_transaction(self, transaction_id):
-        self.url += "/api/v1/transactions/revert"
         payload = {"transactionId": transaction_id}
-        
+
         try:
             r = requests.post(self.url, data=payload, headers=self.headers)
         except requests.exceptions.ConnectionError:
