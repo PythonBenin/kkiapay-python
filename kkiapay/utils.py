@@ -5,7 +5,7 @@ from requests.auth import HTTPBasicAuth
 def make_request(method: str, url: str, data=None, json=None, auth=None, **kwargs):
     """Perform a request.
     Usage::
-      >>> from shared.helpers import make_request
+      >>> from .utils import make_request
       >>> req = make_request('get', 'https://api-sandbox.kkiapay.me')
     """
 
